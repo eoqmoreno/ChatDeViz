@@ -46,7 +46,7 @@ export default function EvaluateOptions() {
             },
             {
                 "role": "user",
-                "content": "Cada item da lista de sugestões deverá receber uma posição sendo a primeira a melhor e responder no seguinte formato: {/tipo: [tipo da visualuação de dados], nota: [uma nota de 1-5 para a visualização], motivo: [descrever o motivo da nota em relação as demais opções] }/"
+                "content": "Cada item da lista de sugestões deverá receber uma posição sendo a primeira a melhor e responder no seguinte formato: {/tipo: [tipo da visualização de dados], nota: [uma nota de 1-5 para a visualização], motivo: [descrever o motivo da nota em relação as demais opções] }/"
             },
             {
                 "role": "user",

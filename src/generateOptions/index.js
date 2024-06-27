@@ -46,7 +46,7 @@ export default function GenerateOptions() {
             },
             {
                 role: "user",
-                content: "Cada item da lista de sugestões deve vir no formato: {/tipo: [tipo da visualuação de dados], descrição: [descrição clara do motivo de usar com pelo menos 50 palavras], variáveis: [lista com as variáveis necessárias para usar essa visualização e como usar a variável] }/"
+                content: "Cada item da lista de sugestões deve vir no formato: {/tipo: [tipo da visualização de dados], descrição: [descrição clara do motivo de usar com pelo menos 50 palavras], variáveis: [lista com as variáveis necessárias para usar essa visualização e como usar a variável] }/"
             },
             {
                 role: "user",
