@@ -42,14 +42,18 @@ O Git é um sistema de controle de versão distribuído gratuito e de código ab
 1. Abra o terminal.
 2. Navegue até o local onde deseja clonar o repositório.
 3. Digite o seguinte comando:
-`git clone <URL_DO_REPOSITÓRIO>`
+```console
+git clone <URL_DO_REPOSITÓRIO>
+```
 4. Pressione ENTER para criar o clone local.
 5. Navegue até o projeto clonado.
 
 ### 4. Instalar bibliotecas
 
 Digite o seguinte comando:
-`npm install`
+```console
+npm install
+```
 
 ### 5. Adicionando a chave da OpenAI
 1. Vá até o seu perfil da OpenAI.
@@ -57,9 +61,13 @@ Digite o seguinte comando:
 3. Copie a chave gerada.
 4. Crie um arquivo com o nome `.env` no mesmo nível do README no projeto
 5. Crie uma variável com o nome `REACT_APP_CHATGPT_KEY` e atribua a sua chave, dessa forma:
-` REACT_APP_CHATGPT_KEY =  "[ SUA CHAVE AQUI ]" `
+```console
+REACT_APP_CHATGPT_KEY =  "[ SUA CHAVE AQUI ]"
+```
 1. salve o arquivo.
 
 ### 6. Iniciando o projeto
 Digite o seguinte comando:
-`npm start`
+```console
+npm start
+```
