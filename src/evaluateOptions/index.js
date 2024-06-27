@@ -7,7 +7,7 @@ import { client } from '../axios';
 
 // imported assets
 import BadgeIcon from '@mui/icons-material/Badge';
-import BarChartIcon from '@mui/icons-material/BarChart';
+import CrisisAlertIcon from '@mui/icons-material/CrisisAlert';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import CommentIcon from '@mui/icons-material/Comment';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
@@ -81,11 +81,11 @@ export default function EvaluateOptions() {
 
                 <Grid container item md={2.4} alignItems={'center'} flexDirection='column' sx={{ cursor: 'pointer', color: visibilityCards.role ? '#EA5B0C' : '#676c6f' }} onClick={() => setVisibilityCards({ role: true, problem: false, list: false, prompt: false, generation: false })}>
                     <BadgeIcon />
-                    <Typography>Trabalho</Typography>
+                    <Typography>Cargo</Typography>
                 </Grid>
                 <Grid container item md={2.4} alignItems={'center'} flexDirection='column' sx={{ cursor: 'pointer', color: visibilityCards.problem ? '#EA5B0C' : '#676c6f' }} onClick={() => setVisibilityCards({ role: false, problem: true, list: false, prompt: false, generation: false })}>
-                    <BarChartIcon />
-                    <Typography>Problema</Typography>
+                    <CrisisAlertIcon />
+                    <Typography>Objetivo</Typography>
                 </Grid>
                 <Grid container item md={2.4} alignItems={'center'} flexDirection='column' sx={{ cursor: 'pointer', color: visibilityCards.list ? '#EA5B0C' : '#676c6f' }} onClick={() => setVisibilityCards({ role: false, problem: false, list: true, prompt: false, generation: false })}>
                     <ListAltIcon />
@@ -104,7 +104,8 @@ export default function EvaluateOptions() {
 
             <Grid sx={{ display: visibilityCards.role ? 'flex' : 'none' }} container item flexDirection='column' p={4} gap={2} className='backgroundWhite borderRadius shadow'>
                 <Typography variant='subtitle1'>Sobre o seu trabalho</Typography>
-                <Typography>Descreva o seu trabalho/cargo</Typography>
+                <Typography>Descreva o seu cargo ou função</Typography>
+                <Typography variant='caption'>Ex.: gerente de marketing de uma loja de móveis</Typography>
                 <TextField
                     multiline
                     onChange={(e) => setAboutRole(e.target.value)}
@@ -117,8 +118,9 @@ export default function EvaluateOptions() {
             </Grid>
 
             <Grid sx={{ display: visibilityCards.problem ? 'flex' : 'none' }} container item flexDirection='column' p={4} gap={2} className='backgroundWhite borderRadius shadow'>
-                <Typography variant='subtitle1'>Sobre o problema</Typography>
+                <Typography variant='subtitle1'>Sobre o objetivo</Typography>
                 <Typography>Descreva o seu problema a ser resolvido na visualização</Typography>
+                <Typography variant='caption'>Ex.: apresentar a quantidade de venda de sofás por loja no último semestre.</Typography>
                 <TextField
                     multiline
                     onChange={(e) => setAboutProblem(e.target.value)}
@@ -133,6 +135,7 @@ export default function EvaluateOptions() {
             <Grid sx={{ display: visibilityCards.list ? 'flex' : 'none' }} container item flexDirection='column' p={4} gap={2} className='backgroundWhite borderRadius shadow'>
                 <Typography variant='subtitle1'>Lista de possibilidades</Typography>
                 <Typography>Adicione a lista de ideias de visualização dados para o problema, coloque o nome da visualização e as informações que achar necessário</Typography>
+                <Typography variant='caption'>Ex.: mapa de calor com o mapa geográfico, gráfico de linhas com cada loja sendo uma linha, gráfico de barras com cada loja sendo uma barra</Typography>
                 <TextField
                     multiline
                     onChange={(e) => setAboutList(e.target.value)}
@@ -145,7 +148,8 @@ export default function EvaluateOptions() {
             </Grid>
 
             <Grid sx={{ display: visibilityCards.prompt ? 'flex' : 'none' }} container item flexDirection='column' p={4} gap={2} className='backgroundWhite borderRadius shadow'>
-                <Typography variant='subtitle1'>Confira as informções do comando</Typography>
+                <Typography variant='subtitle1'>Confira as informações do comando</Typography>
+                <Typography variant='caption'>Caso necessário, volte até o módulo que deseje ajustar para alterar.</Typography>
                 <TextField
                     multiline
                     value={prompt !== null ? JSON.stringify(prompt, null, 2).replace(/"([^"]+)":/g, '$1:') : ""}

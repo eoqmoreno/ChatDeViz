@@ -7,7 +7,7 @@ import { client } from '../axios';
 
 // imported assets
 import BadgeIcon from '@mui/icons-material/Badge';
-import BarChartIcon from '@mui/icons-material/BarChart';
+import CrisisAlertIcon from '@mui/icons-material/CrisisAlert';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import CommentIcon from '@mui/icons-material/Comment';
@@ -81,11 +81,11 @@ export default function GenerateOptions() {
 
                 <Grid container item md={2.4} alignItems={'center'} flexDirection='column' sx={{ cursor: 'pointer', color: visibilityCards.role ? '#EA5B0C' : '#676c6f' }} onClick={() => setVisibilityCards({ role: true, problem: false, user: false, prompt: false, generation: false })}>
                     <BadgeIcon />
-                    <Typography>Trabalho</Typography>
+                    <Typography>Cargo</Typography>
                 </Grid>
                 <Grid container item md={2.4} alignItems={'center'} flexDirection='column' sx={{ cursor: 'pointer', color: visibilityCards.problem ? '#EA5B0C' : '#676c6f' }} onClick={() => setVisibilityCards({ role: false, problem: true, user: false, prompt: false, generation: false })}>
-                    <BarChartIcon />
-                    <Typography>Problema</Typography>
+                    <CrisisAlertIcon />
+                    <Typography>Objetivo</Typography>
                 </Grid>
                 <Grid container item md={2.4} alignItems={'center'} flexDirection='column' sx={{ cursor: 'pointer', color: visibilityCards.user ? '#EA5B0C' : '#676c6f' }} onClick={() => setVisibilityCards({ role: false, problem: false, user: true, prompt: false, generation: false })}>
                     <QueryStatsIcon />
@@ -104,7 +104,8 @@ export default function GenerateOptions() {
 
             <Grid sx={{ display: visibilityCards.role ? 'flex' : 'none' }} container item flexDirection='column' p={4} gap={2} className='backgroundWhite borderRadius shadow'>
                 <Typography variant='subtitle1'>Sobre o seu trabalho</Typography>
-                <Typography>Descreva o seu trabalho/cargo</Typography>
+                <Typography>Descreva o seu cargo ou função</Typography>
+                <Typography variant='caption'>Ex.: gerente de marketing de uma loja de móveis</Typography>
                 <TextField
                     multiline
                     focused
@@ -118,8 +119,9 @@ export default function GenerateOptions() {
             </Grid>
 
             <Grid sx={{ display: visibilityCards.problem ? 'flex' : 'none' }} container item flexDirection='column' p={4} gap={2} className='backgroundWhite borderRadius shadow'>
-                <Typography variant='subtitle1'>Sobre o problema</Typography>
+                <Typography variant='subtitle1'>Sobre o objetivo</Typography>
                 <Typography>Descreva o seu problema a ser resolvido na visualização</Typography>
+                <Typography variant='caption'>Ex.: apresentar a quantidade de venda de sofás por loja no último semestre</Typography>
                 <TextField
                     multiline
                     focused
@@ -135,6 +137,7 @@ export default function GenerateOptions() {
             <Grid sx={{ display: visibilityCards.user ? 'flex' : 'none' }} container item flexDirection='column' p={4} gap={2} className='backgroundWhite borderRadius shadow'>
                 <Typography variant='subtitle1'>Sobre o visualizador</Typography>
                 <Typography>Descreva o destinatário da sua visualização de dados</Typography>
+                <Typography variant='caption'>Ex.: grupo de investidores que desejam abrir uma nova loja franquiada</Typography>
                 <TextField
                     multiline
                     focused
@@ -148,7 +151,8 @@ export default function GenerateOptions() {
             </Grid>
 
             <Grid sx={{ display: visibilityCards.prompt ? 'flex' : 'none' }} container item flexDirection='column' p={4} gap={2} className='backgroundWhite borderRadius shadow'>
-                <Typography variant='subtitle1'>Confira as informções do comando</Typography>
+                <Typography variant='subtitle1'>Confira as informações do comando</Typography>
+                <Typography variant='caption'>Caso necessário, volte até o módulo que deseje ajustar para alterar.</Typography>
                 <TextField
                     multiline
                     focused
