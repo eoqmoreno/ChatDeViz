@@ -1,0 +1,37 @@
+/* Default to page */
+
+body {
+  margin: 0;
+}
+
+/* Colors */
+
+:root{
+  --grey : #cccccc;
+}
+
+.backgroundGrey{
+  background-color: var(--grey);
+}
+
+.backgroundWhite{
+  background-color: white;
+}
+
+/* Borders */
+
+.borderRadius{
+  border-radius: 8px;
+}
+
+/* Shadows */
+
+.shadow{
+  box-shadow: 0px 0px 20px #a5a5a5;
+}
+
+/* Images */
+
+.imgBanner{
+  width: 100%;
+}

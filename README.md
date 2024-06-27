@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Seja bem-vindo(a) ao ChartDeViz
+![Baner com o texto ChatDeViz, o nome do site](/assets/banner.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sobre o projeto
 
-## Available Scripts
+O ChatDeViz é um sistema que permite utilizar as capacidades do Large Language Model (LLM) da OpenAI por meio do seu chat, o ChatGPT, para gerar e avaliar respostas no processo inicial de um processo de design de visualização de dados. Esse sistema utiliza o modelo para recuperar as informações adicionadas no treinamento para ajudar a usuários não especialistas da área de visualização de dados a realizarem pesquisas e avaliações de possibilidades de resposta de visualização de dados.
 
-In the project directory, you can run:
+O ChatDeViz permite que usuários não especialistas em visualização de dados possam por meio de um caminho guiado pelo sistema, coletar informações sobre como e quais visualizações utilizar para possivelmente resolver os seus problemas de visuaização de dados.
 
-### `npm start`
+Neste sistema o usuário poderá inseir o possível usuário da visualização, a sua definição do problema e esperar que o sistema gere as possibilidades de resposta. Em outro fluxo, o usuário também poderá pedir ao sistema para avaliar a qualidade e indicar qual dentre elas pode melhor ajudar no seu problema.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Por se tratar de usuários não especialistas em visualização de dados, esse sistema buscou embutir em uma interface de interação comandos padrão para gerar e avaliar as visualizações de dados
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Esses usuários podem ser gerentes de loja que desejam apresentar o quantitativo de venda de uma loja em relação a um determinado período de tempo, ou um professor que deseja mostrar em uma aula de biologia o desmatamento da Amazonia em relação os governos federais.
 
-### `npm test`
+O sistema ainda está em construção pois parte de um recorte do meu trabalho de discertação. O trabalho busca avaliar a capacidade do ChatGPT para ajudar no processo de desing de visualização de dados, avaliando o modelo em cada uma das possiveis etapas do processo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+___
 
-### `npm run build`
+## Requisitos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Por se tratar de um sistema construído com o React exitem algumas demandas técnicas para executar a ferramenta localmente.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Instalar o Node.js
+Node.js é uma ambiente de execução de JavaScript disponível para várias plataformas, de código aberto e gratuita, que permite os programadores criar servidores, aplicações da Web, ferramentas de linha de comando e programas de automação de tarefas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Ir para a Node.js](https://nodejs.org/pt)
 
-### `npm run eject`
+### 2. Instalar o npm
+O npm é o maior registro de software do mundo. Desenvolvedores de código aberto de todos os continentes usam o npm para compartilhar e emprestar pacotes, e muitas organizações usam o npm para gerenciar o desenvolvimento privado também.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[Ir para a npm](https://www.npmjs.com/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. Instalar o git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+O Git é um sistema de controle de versão distribuído gratuito e de código aberto projetado para lidar com tudo, desde pequenos até Projetos muito grandes com rapidez e eficiência.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Ir para a git](https://git-scm.com/)
 
-## Learn More
+### 3. Clonar o repositório
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Abra o terminal.
+2. Navegue até o local onde deseja clonar o repositório.
+3. Digite o seguinte comando:
+`git clone <URL_DO_REPOSITÓRIO>`
+4. Pressione ENTER para criar o clone local.
+5. Navegue até o projeto clonado.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Instalar bibliotecas
 
-### Code Splitting
+Digite o seguinte comando:
+`npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 5. Adicionando a chave da OpenAI
+1. Vá até o seu perfil da OpenAI.
+2. Crie um [chave da API](https://platform.openai.com/settings/profile?tab=api-keys).
+3. Copie a chave gerada.
+4. Crie um arquivo com o nome `.env` no mesmo nível do README no projeto
+5. Crie uma variável com o nome `REACT_APP_CHATGPT_KEY` e atribua a sua chave, dessa forma:
+` REACT_APP_CHATGPT_KEY =  "[ SUA CHAVE AQUI ]" `
+1. salve o arquivo.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 6. Iniciando o projeto
+Digite o seguinte comando:
+`npm start`
